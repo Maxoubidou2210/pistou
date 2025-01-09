@@ -1,3 +1,4 @@
+
 import math
 import pygame
 import sys
@@ -10,7 +11,7 @@ import queue
 import SIMU_LIB as sim
 import time
 import socket
-#nciknzln
+
 
 #Création de la queue
 Data=np.zeros(77)
@@ -41,7 +42,7 @@ BUTTON_COLOR = LIGHT_GRAY
 BLUE = (0,255,255)
 DARK_GRAY = (169, 169, 169)
 BLUE_GRAY = (120, 150, 180)
-
+Alaska_color=LIGHT_GRAY
 # Polices
 def_font = pygame.font.Font(None, 24)
 font_bold = pygame.font.Font(None, 20)
@@ -595,6 +596,8 @@ def draw_interface():
     # Fenetre 12
     
     # Fenetre 13 
+       
+        draw_button(780,910,220,40,Alaska_color,"Utilisation Alaska",text_color=BLACK)
     
     # Fenetre 14
     
@@ -630,7 +633,7 @@ def get_state_matrix():
 
 def main():
     global draw_interface, gauge_y, gauge_dragging, selected_button, button_states, gauge_values, gauge_degrees,rotation_angle,rotation_angle9, rotation_angle10, rotation_angle11, active_CSG, active_TLA1, active_TLA2, active_TLA2, active_TLA3, CSG_color, TLA1_color, TLA2_color,TLA3_color,value_CSG,value_TLA1,value_TLA2_value_TLA3
-    global value_CSG, value_TLA1,value_TLA2, value_TLA3,active_button
+    global value_CSG, value_TLA1,value_TLA2, value_TLA3,active_button, Alaska_color
     f=10
     running=True
     compteur=1
@@ -752,6 +755,10 @@ def main():
                     else:
                          active_TLA3 = False
                          TLA3_color = WHITE
+                    if 780 <= event.pos[0] <= 780 + 220 and 910 <= event.pos[1] <= 950 :
+                        Alaska_color= GREEN
+                    else:
+                        Alaska_color= LIGHT_GRAY
                         
                    
                         
