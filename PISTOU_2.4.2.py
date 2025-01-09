@@ -20,7 +20,7 @@ Data[4:]=sim.moteur(0,1279,0) #tt4_0=1279K
 
 D=queue.Queue()
 D.put(Data)
-
+#coucou
 #Données réseau
 
 MULTICAST_IP_DEST='1'
