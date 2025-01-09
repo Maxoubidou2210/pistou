@@ -11,7 +11,7 @@ import queue
 import SIMU_LIB as sim
 import time
 import socket
-
+#coucoumax
 
 #Création de la queue
 Data=np.zeros(77)
